@@ -9,7 +9,7 @@
     "layer": [
         {
             "data": {
-                "url": "ne_110m.json",
+                "url": "https://github.com/derrickfong/week9_homework/blob/10b087ad137b52d5451ccc477494b5c33343da10/ne_110m_admin_0_countries.json",
                 "format": {
                     "type": "topojson",
                     "feature": "ne_110m_admin_0_countries"
@@ -23,7 +23,7 @@
         },
         {
             "data": {
-                "url": "a2.csv"
+                "url": "https://github.com/derrickfong/week9_homework/blob/10b087ad137b52d5451ccc477494b5c33343da10/a2.csv"
             },
             "mark": {
                 "type": "circle",
@@ -43,18 +43,20 @@
                 "size": {
                     "field": "Rainfall",
                     "type": "quantitative",
-                    "title": "Magnitude (Richter scale)",
+                    "title": "Rainfall (mm)",
                     "scale": {
-                        "domain": [
-                            0,
-                            8
-                        ]
+                        "domain": [0, 400]  // Adjust domain based on realistic rainfall values
                     }
                 },
                 "color": {
                     "field": "Rainfall",
                     "type": "quantitative",
-                    "title": "Depth in km",
+                    "title": "Rainfall Intensity (mm)",
                     "scale": {
-                        "scheme": "reds"
+                        "scheme": "blues"  // Using a blue color scale for rainfall
                     }
+                }
+            }
+        }
+    ]
+}

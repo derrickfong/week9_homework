@@ -2,17 +2,17 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 400,
-    "title": "Rainfall in Australia since December 2008",
+    "title": "Average Rainfall In Australian Towns and Cities since 2008",
     "projection": {
         "type": "mercator"
     },
     "layer": [
         {
             "data": {
-                "url": "js/ne_110m_admin_0_countries.json",
+                "url": "js/STE_2016_AUST.json",
                 "format": {
                     "type": "topojson",
-                    "feature": "ne_110m_admin_0_countries"
+                    "feature": "STE_2016_AUST"
                 }
             },
             "mark": {
@@ -23,7 +23,7 @@
         },
         {
             "data": {
-                "url": "data/a2.csv"
+                "url": "data/avg_rain.csv"
             },
             "mark": {
                 "type": "circle",
@@ -33,23 +33,23 @@
             },
             "encoding": {
                 "longitude": {
-                    "field": "Long",
+                    "field": "Longitude",
                     "type": "quantitative"
                 },
                 "latitude": {
-                    "field": "Lat",
+                    "field": "Latitude",
                     "type": "quantitative"
                 },
                 "size": {
-                    "field": "Rainfall",
+                    "field": "Average_Rainfall",
                     "type": "quantitative",
                     "title": "Rainfall (mm)",
                     "scale": {
-                        "domain": [0, 400]  
+                        "domain": [0, 6]  
                     }
                 },
                 "color": {
-                    "field": "Rainfall",
+                    "field": "Average_Rainfall",
                     "type": "quantitative",
                     "title": "Rainfall Intensity (mm)",
                     "scale": {
